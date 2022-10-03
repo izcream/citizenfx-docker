@@ -1,0 +1,10 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["fxmanifest.json"],
+      "url": "./scripts/fxmanifest.schema.json"
+    }
+  ]
+}

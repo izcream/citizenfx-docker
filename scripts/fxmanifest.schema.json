@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "fxmanifest",
+  "description": "Schema for fxmanifest.json files",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the resource",
+      "minLength": 1
+    },
+    "fx_version": {
+      "type": "string",
+      "description": "The FXServer version this resource is compatible with",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of resources",
+      "pattern": "^(\\d+\\.\\d+\\.\\d+)(-.+)?$",
+      "default": "1.0.0"
+    },
+    "game": {
+      "type": "array",
+      "description": "The games this resource is compatible with",
+      "items": {
+        "type": "string",
+        "enum": ["gta5", "gta4", "rdr3"]
+      }
+    },
+    "author": {
+      "type": "string",
+      "description": "The author of the resource",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the resource",
+      "default": "RedM RP Resources"
+    },
+    "client_scripts": {
+      "type": "array",
+      "description": "Client scripts to load",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": ["client.js"]
+    },
+    "server_scripts": {
+      "type": "array",
+      "description": "Server scripts to load",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": ["server.js"]
+    },
+    "shared_scripts": {
+      "type": "array",
+      "description": "Shared scripts to load",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  }
+}

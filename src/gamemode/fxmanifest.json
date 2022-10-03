@@ -1,0 +1,10 @@
+{
+  "name": "gamemode",
+  "fx_version": "cerulean",
+  "game": ["rdr3", "gta5"],
+  "author": "izcream*",
+  "description": "GGEZ",
+  "version": "1.0.0",
+  "client_scripts": ["client.js"],
+  "server_scripts": ["server.js"]
+}

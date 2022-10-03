@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ES2017", "DOM"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "outDir": "resources",
+    "baseUrl": ".",
+    "types": ["./types"],
+    "typeRoots": ["node_modules/@types", "./types"]
+  },
+  "exclude": ["**/node_modules"],
+  "include": ["src/**/*"]
+}

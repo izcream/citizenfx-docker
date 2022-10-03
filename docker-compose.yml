@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - RUNTIME_URL=${RUNTIME_URL}
+    container_name: server
+    working_dir: /server
+    depends_on:
+      - database
+    ports:
+      - 30120:30120
+      - 30120:30120/udp
+    volumes:
+      - ./resources:/server/resources
+      - ./server.cfg:/server/server.cfg
+      - ./start.sh:/server/start.sh
+    tty: true
+  database:
+    image: postgres:13-alpine
+    container_name: database
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - TZ=Asia/Bangkok
+    ports:
+      - ${DB_PORT:-5432}:${DB_PORT:-5432}
+    volumes:
+      - redm:/var/lib/postgresql/data
+
+volumes:
+  redm:
