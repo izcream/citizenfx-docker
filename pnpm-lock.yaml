@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@abraham/reflection': ^0.11.0
       '@citizenfx/client': 2.0.5914-1
       '@citizenfx/server': 2.0.5914-1
       '@types/node': ^18.8.0
@@ -11,17 +12,22 @@ importers:
       esbuild: ^0.15.10
       fs-extra: ^10.1.0
       tiny-glob: ^0.2.9
+      ts-node: ^10.9.1
       ts-node-dev: ^2.0.0
+      tsyringe: ^4.7.0
       typescript: ^4.8.4
     dependencies:
+      '@abraham/reflection': 0.11.0
       '@citizenfx/client': 2.0.5914-1
       '@citizenfx/server': 2.0.5914-1
+      tsyringe: 4.7.0
     devDependencies:
       '@types/node': 18.8.0
       dotenv: 16.0.3
       esbuild: 0.15.10
       fs-extra: 10.1.0
       tiny-glob: 0.2.9
+      ts-node: 10.9.1_5ra3kupzwcghzakkfdrtyjk72u
       ts-node-dev: 2.0.0_5ra3kupzwcghzakkfdrtyjk72u
       typescript: 4.8.4
 
@@ -29,6 +35,10 @@ importers:
     specifiers: {}
 
 packages:
+
+  /@abraham/reflection/0.11.0:
+    resolution: {integrity: sha512-lCPIgtjeiZ7ZWLPP5RiAmGAyw5I0dHMt0GzzKZVZiZ48lNC0sGnmTzKITEtOlZevylf0sf5vjhbEmByuQMQE9Q==}
+    dev: false
 
   /@citizenfx/client/2.0.5914-1:
     resolution: {integrity: sha512-hzXo0Yt4AAB6DeNDBj9/vk4BTBW8doabLvDH4roK0JcwZKOOw5u4Q0shmiclmSrLJST26jhULiU71Fsjtt4j2g==}
@@ -705,6 +715,17 @@ packages:
       strip-bom: 3.0.0
       strip-json-comments: 2.0.1
     dev: true
+
+  /tslib/1.14.1:
+    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: false
+
+  /tsyringe/4.7.0:
+    resolution: {integrity: sha512-ncFDM1jTLsok4ejMvSW5jN1VGPQD48y2tfAR0pdptWRKYX4bkbqPt92k7KJ5RFJ1KV36JEs/+TMh7I6OUgj74g==}
+    engines: {node: '>= 6.0.0'}
+    dependencies:
+      tslib: 1.14.1
+    dev: false
 
   /typescript/4.8.4:
     resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}

@@ -38,6 +38,7 @@ class ResourceBuilder {
       platform: 'node',
       target: ['node16'],
       format: 'cjs',
+      bundle: true,
       minify: IS_PRODUCTION,
       watch: process.argv.includes('--watch')
     })
@@ -46,10 +47,12 @@ class ResourceBuilder {
     return build({
       entryPoints: [`${resource.srcPath}/client/index.ts`],
       outfile: `${resource.buildPath}/client.js`,
-      platform: 'browser',
-      target: ['chrome93'],
-      format: 'iife',
+      platform: 'node',
+      target: ['node16'],
+      format: 'cjs',
+      bundle: true,
       minify: IS_PRODUCTION,
+      external: [],
       watch: process.argv.includes('--watch')
     })
   }

@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "build": "NODE_ENV=production ts-node-dev scripts/index.ts",
-    "dev": "NODE_ENV=development ts-node-dev --respawn --watch src/**/*.ts scripts/index.ts ",
+    "dev": "NODE_ENV=development ts-node-dev --respawn --watch src/**/*.ts scripts/index.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -20,7 +20,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "@abraham/reflection": "^0.11.0",
     "@citizenfx/client": "2.0.5914-1",
-    "@citizenfx/server": "2.0.5914-1"
+    "@citizenfx/server": "2.0.5914-1",
+    "tsyringe": "^4.7.0"
   }
 }

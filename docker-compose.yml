@@ -9,8 +9,8 @@ services:
         - RUNTIME_URL=${RUNTIME_URL}
     container_name: server
     working_dir: /server
-    depends_on:
-      - database
+    # depends_on:
+    #   - database
     ports:
       - 30120:30120
       - 30120:30120/udp
@@ -18,19 +18,20 @@ services:
       - ./resources:/server/resources
       - ./server.cfg:/server/server.cfg
       - ./start.sh:/server/start.sh
+      - ./node_modules:/server/node_modules
     tty: true
-  database:
-    image: postgres:13-alpine
-    container_name: database
-    environment:
-      - POSTGRES_DB=${DB_DATABASE}
-      - POSTGRES_USER=${DB_USERNAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - TZ=Asia/Bangkok
-    ports:
-      - ${DB_PORT:-5432}:${DB_PORT:-5432}
-    volumes:
-      - redm:/var/lib/postgresql/data
+  # database:
+  #   image: postgres:13-alpine
+  #   container_name: database
+  #   environment:
+  #     - POSTGRES_DB=${DB_DATABASE}
+  #     - POSTGRES_USER=${DB_USERNAME}
+  #     - POSTGRES_PASSWORD=${DB_PASSWORD}
+  #     - TZ=Asia/Bangkok
+  #   ports:
+  #     - ${DB_PORT:-5432}:${DB_PORT:-5432}
+  #   volumes:
+  #     - redm:/var/lib/postgresql/data
 
 volumes:
   redm:

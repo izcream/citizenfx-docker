@@ -1,2 +1,3 @@
 #!/bin/bash
-./run.sh +exec server.cfg +set gamename rdr3 
+clear
+/server/run.sh +exec /server/server.cfg +set gamename rdr3 

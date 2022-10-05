@@ -1,3 +1,5 @@
+import '@abraham/reflection'
+
 console.log('Gamemode Started')
 
 onNet('playerJoining', (name) => {
