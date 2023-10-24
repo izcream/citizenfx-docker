@@ -1,7 +1,7 @@
 {
   "name": "gamemode",
-  "fx_version": "adamant",
-  "game": ["rdr3"],
+  "fx_version": "cerulean",
+  "game": ["gta5"],
   "author": "izcream*",
   "description": "GGEZ",
   "version": "1.0.0",

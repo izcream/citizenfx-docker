@@ -39,8 +39,7 @@ class ResourceBuilder {
       target: ['node16'],
       format: 'cjs',
       bundle: true,
-      minify: IS_PRODUCTION,
-      watch: process.argv.includes('--watch')
+      minify: IS_PRODUCTION
     })
   }
   private buildClient(resource: Resource) {
@@ -52,8 +51,7 @@ class ResourceBuilder {
       format: 'cjs',
       bundle: true,
       minify: IS_PRODUCTION,
-      external: [],
-      watch: process.argv.includes('--watch')
+      external: []
     })
   }
   private prepareResource(resourceJsonFile: string): Resource {

@@ -6,23 +6,24 @@
   "author": "izcream*",
   "license": "ISC",
   "scripts": {
-    "build": "NODE_ENV=production ts-node-dev scripts/index.ts",
-    "dev": "NODE_ENV=development ts-node-dev --respawn --watch src/**/*.ts scripts/index.ts",
+    "build": "NODE_ENV=production tsx scripts/index.ts",
+    "dev": "NODE_ENV=development nodemon -w ./src -x tsx scripts/index.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/node": "^18.8.0",
-    "dotenv": "^16.0.3",
-    "esbuild": "^0.15.10",
-    "fs-extra": "^10.1.0",
+    "@types/node": "^20.8.7",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.19.5",
+    "fs-extra": "^11.1.1",
+    "nodemon": "^3.0.1",
     "tiny-glob": "^0.2.9",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.8.4"
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@abraham/reflection": "^0.11.0",
-    "@citizenfx/client": "2.0.5914-1",
-    "@citizenfx/server": "2.0.5914-1",
-    "tsyringe": "^4.7.0"
+    "@abraham/reflection": "^0.12.0",
+    "@citizenfx/client": "2.0.6878-1",
+    "@citizenfx/server": "2.0.6878-1",
+    "tsyringe": "^4.8.0"
   }
 }

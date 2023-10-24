@@ -10,9 +10,7 @@
     "removeComments": true,
     "outDir": "resources",
     "baseUrl": ".",
-    "types": ["./types"],
-    "typeRoots": ["node_modules/@types", "./types"]
+    "typeRoots": ["node_modules/@types"]
   },
-  "exclude": ["**/node_modules"],
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "./types/index.d.ts"]
 }
